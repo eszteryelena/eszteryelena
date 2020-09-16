@@ -13,7 +13,7 @@ namespace game
         public int x, y, width, height;//variables for the rectangle
         public Image planetImage;//variable for the planet&#39;s image
         public Rectangle planetRec;//variable for a rectangle to place our image in
-        public int score;
+        
 
         Random xstart = new Random();
         //Create a constructor (initialises the values of the fields)

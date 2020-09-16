@@ -23,6 +23,7 @@ namespace game
         bad[] bad = new bad[7];
         collect[] collect = new collect[3];
         potion[] potion = new potion[2];
+        List<watershoot> missiles = new List< watershoot > ();
         Random xspeed = new Random();
         Random ystart = new Random();
 
@@ -78,6 +79,11 @@ namespace game
             if (e.KeyData == Keys.Right) { right = true; }
             if (e.KeyData == Keys.Up) { up = true; }
             if (e.KeyData == Keys.Down) { down = true; }
+
+            if (e.KeyData == Keys.Space)
+            {
+                missiles.Add(new watershoot(good.spaceRec));
+            }
         }
 
         private void water_KeyUp(object sender, KeyEventArgs e)
@@ -214,6 +220,14 @@ namespace game
             //get the graphics used to paint on the panel control
             g = e.Graphics;
             good.DrawSpaceship(g);
+
+
+            foreach (watershoot m in missiles)
+            {
+                m.drawMissile(g);
+                m.moveMissile(g);
+            }
+
             //call the Planet class&#39;s DrawPlanet method to draw the image planet1
             for (int i = 0; i < 7; i++)
             {
@@ -301,8 +315,28 @@ namespace game
                 pictureBox5.BackgroundImage = Properties.Resources.score100;
             }
         }
-            private void tmrBad_Tick(object sender, EventArgs e)
+
+       /* private void enemyhit()
         {
+            for (int i = 0; i < 7; i++)
+            ////That's a loop that says, when the enemyhit method is called, for every time that i is smaller than 7, 
+            //I'm going to do whatever is in the code block. Whenever i reaches 7, 
+            //I'll stop. After each iteration of the loop, it increments i by 1 (i++), so that
+            //the loop will eventually stop when it meets the i < 7
+            {
+                bad[i].MovePlanet();//calls the move villn method from the villan class
+                if (missiles.Bounds.IntersectsWith(bad[i].planetRec))//when the blast touches the villan then:
+                {
+                    bad[i].x = 930; // set y value of planetRec
+                }
+            }
+
+
+        } */
+
+        private void tmrBad_Tick(object sender, EventArgs e)
+        {
+
             for (int i = 0; i < 7; i++)
             {
                 //call the Planet class&#39;s drawPlanet method to draw the images
@@ -327,6 +361,8 @@ namespace game
                 }
             }
 
+
+           
 
             for (int i = 0; i < 3; i++)
             {
