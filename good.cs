@@ -20,7 +20,25 @@ namespace game
             y = 350;
             width = 50;
             height = 50;
-            spaceship = Properties.Resources.green;
+
+
+            if (selectCharacter.variable1 == 1)
+            {
+                spaceship = Properties.Resources.select1;
+            }
+
+            if (selectCharacter.variable1 == 2)
+            {
+                spaceship = Properties.Resources.select2;
+            }
+
+            if (selectCharacter.variable1 == 3)
+            {
+                spaceship = Properties.Resources.select3;
+            }
+
+
+
             spaceRec = new Rectangle(x, y, width, height);
         }
 

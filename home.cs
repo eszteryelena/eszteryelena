@@ -22,7 +22,7 @@ namespace game
         {
             this.Hide(); //the form disappears
             level = 1;
-            change1 water = new change1(); //creates a new level form and opens it
+            selectCharacter water = new selectCharacter(); //creates a new level form and opens it
             water.ShowDialog(); //this shows the form as a modal dialog box. 
             this.Close(); //this closes the form to complete the form change
 

@@ -138,6 +138,8 @@ namespace game
 
         private void water_Load(object sender, EventArgs e)
         {
+            lblName.Text = typename.SetValueForText1;
+
             score = 0;
             lives = 5;
             tmrGood.Enabled = true;
@@ -220,6 +222,11 @@ namespace game
                 c1.ShowDialog(); //this shows the form as a modal dialog box. 
                 this.Close(); //this closes the form to complete the form change
             }
+        }
+
+        private void lblName_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void tmrCountdown_Tick(object sender, EventArgs e)

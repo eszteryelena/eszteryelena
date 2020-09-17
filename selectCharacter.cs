@@ -8,51 +8,196 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace coven
+namespace game
 {
     public partial class selectCharacter : Form
     {
+        public static int variable1;
+        int clickCounter;
         public selectCharacter()
         {
             InitializeComponent();
+            clickCounter = 0;
         }
 
         private void selectCharacter_Load(object sender, EventArgs e)
         {
-           
-            pictureBox1.Image = Image.FromFile("C:\\Users\\eszterscarlettherbe\\Downloads\\1f7e21.png");
-            pictureBox2.Image = Image.FromFile("C:\\Users\\eszterscarlettherbe\\Downloads\\Blue-circle1.png");
-            pictureBox3.Image = Image.FromFile("C:\\Users\\eszterscarlettherbe\\Downloads\\red-circle-md.png");
-
+            pictureBoxLeft.BackgroundImage = Properties.Resources.select1bw;
+            pictureBoxMiddle.BackgroundImage = Properties.Resources.select2;
+            pictureBoxRight.BackgroundImage = Properties.Resources.select3bw;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+
+        private void leftArrowmiddle_Click_1(object sender, EventArgs e)
         {
-            pictureBox2.Image = Image.FromFile("C:\\Users\\eszterscarlettherbe\\Downloads\\red-circle-md.png");
-            pictureBox1.Image = Image.FromFile("C:\\Users\\eszterscarlettherbe\\Downloads\\Blue-circle1.png");
-            pictureBox3.Image = Image.FromFile("C:\\Users\\eszterscarlettherbe\\Downloads\\1f7e21.png");
+            // first time click
+            pictureBoxLeft.BackgroundImage = Properties.Resources.select2bw;
+            pictureBoxMiddle.BackgroundImage = Properties.Resources.select3;
+            pictureBoxRight.BackgroundImage = Properties.Resources.select1bw;
 
-            /* Bitmap red = new Bitmap("C: \\Users\\eszterscarlettherbe\\Downloads\\red-circle-md.png");
-             pictureBox3.Image = red;
-             int width = pictureBox1.Width;
-             int height = pictureBox1.Height;
+            leftplay.Location = new Point(1000, 393);
+            middleplay.Location = new Point(-400, 393);
+            rightplay.Location = new Point(384, 450);
 
-             Color p;
-             for (int y = 0; y < height; y++)
-             {
-                 for (int x = 0; x < width; x++)
-                 {
-                     p = red.GetPixel(x, y);
-                     int a = p.A;
-                     int r = p.R;
-                     int g = p.G;
-                     int b = p.B;
+            leftArrowmiddle.Location = new Point(-200, 442);
+            rightArrowmiddle.Location = new Point(-200, 442);
 
+            leftArrowright.Location = new Point(258, 442);
+            rightArrowright.Location = new Point(518, 442);
 
-                     int avg = (r + g + b) / 3;
-                     red.SetPixel(x, y, Color.FromArgb(a, avg, avg, avg));
-                 }
-             }*/
+            leftArrowleft.Location = new Point(1000, 442);
+            rightArrowleft.Location = new Point(1000, 442);
         }
+
+        private void leftArrowright_Click(object sender, EventArgs e)
+        {
+            pictureBoxLeft.BackgroundImage = Properties.Resources.select3bw;
+            pictureBoxMiddle.BackgroundImage = Properties.Resources.select1;
+            pictureBoxRight.BackgroundImage = Properties.Resources.select2bw;
+
+            leftplay.Location = new Point(384, 450);
+            middleplay.Location = new Point(1000, 399);
+            rightplay.Location = new Point(-400, 393);
+
+            leftArrowmiddle.Location = new Point(1000, 442);
+            rightArrowmiddle.Location = new Point(1000, 442);
+
+            leftArrowright.Location = new Point(-200, 442);
+            rightArrowright.Location = new Point(-200, 442);
+
+            leftArrowleft.Location = new Point(258, 442);
+            rightArrowleft.Location = new Point(518, 442);
+
+        }
+
+        private void leftArrowleft_Click(object sender, EventArgs e)
+        {
+            // first time click
+            pictureBoxLeft.BackgroundImage = Properties.Resources.select1bw;
+            pictureBoxMiddle.BackgroundImage = Properties.Resources.select2;
+            pictureBoxRight.BackgroundImage = Properties.Resources.select3bw;
+
+            leftplay.Location = new Point(-400, 393);
+            middleplay.Location = new Point(384, 450);
+            rightplay.Location = new Point(1000, 393);
+
+            leftArrowmiddle.Location = new Point(258, 442);
+            rightArrowmiddle.Location = new Point(518, 442);
+
+            leftArrowright.Location = new Point(1000, 442);
+            rightArrowright.Location = new Point(1000, 442);
+
+            leftArrowleft.Location = new Point(-200, 442);
+            rightArrowleft.Location = new Point(-200, 442);
+
+
+        }
+
+
+
+
+        private void rightArrowleft_Click(object sender, EventArgs e)
+        {
+            pictureBoxLeft.BackgroundImage = Properties.Resources.select2bw;
+            pictureBoxMiddle.BackgroundImage = Properties.Resources.select3;
+            pictureBoxRight.BackgroundImage = Properties.Resources.select1bw;
+
+            leftplay.Location = new Point(1000, 393);
+            middleplay.Location = new Point(-400, 393);
+            rightplay.Location = new Point(384, 450);
+
+            leftArrowmiddle.Location = new Point(-200, 442);
+            rightArrowmiddle.Location = new Point(-200, 442);
+
+            leftArrowright.Location = new Point(258, 442);
+            rightArrowright.Location = new Point(518, 442);
+
+            leftArrowleft.Location = new Point(1000, 442);
+            rightArrowleft.Location = new Point(1000, 442);
+
+        }
+
+
+        private void rightArrow_Click(object sender, EventArgs e)
+        {
+            pictureBoxLeft.BackgroundImage = Properties.Resources.select3bw;
+            pictureBoxMiddle.BackgroundImage = Properties.Resources.select1;
+            pictureBoxRight.BackgroundImage = Properties.Resources.select2bw;
+
+            leftplay.Location = new Point(384, 450);
+            middleplay.Location = new Point(1000, 399);
+            rightplay.Location = new Point(-400, 393);
+
+            leftArrowmiddle.Location = new Point(1000, 442);
+            rightArrowmiddle.Location = new Point(1000, 442);
+
+            leftArrowright.Location = new Point(-200, 442);
+            rightArrowright.Location = new Point(-200, 442);
+
+            leftArrowleft.Location = new Point(258, 442);
+            rightArrowleft.Location = new Point(518, 442);
+
+        }
+
+        private void rightArrowright_Click(object sender, EventArgs e)
+        {
+            pictureBoxLeft.BackgroundImage = Properties.Resources.select1bw;
+            pictureBoxMiddle.BackgroundImage = Properties.Resources.select2;
+            pictureBoxRight.BackgroundImage = Properties.Resources.select3bw;
+
+            leftplay.Location = new Point(-400, 393);
+            middleplay.Location = new Point(384, 450);
+            rightplay.Location = new Point(1000, 393);
+
+            leftArrowmiddle.Location = new Point(258, 442);
+            rightArrowmiddle.Location = new Point(518, 442);
+
+            leftArrowright.Location = new Point(1000, 442);
+            rightArrowright.Location = new Point(1000, 442);
+
+            leftArrowleft.Location = new Point(-200, 442);
+            rightArrowleft.Location = new Point(-200, 442);
+
+        }
+
+
+
+        private void leftplay_Click(object sender, EventArgs e)
+        {
+
+            variable1 = 1;
+            this.Hide();
+            //character.characterImage = Image.FromFile(&quot;object.png&quot;);
+            typename fl1 = new typename();
+            fl1.ShowDialog();
+            this.Close();
+        }
+
+        private void middleplay_Click(object sender, EventArgs e)
+        {
+            variable1 = 2;
+            this.Hide();
+            //character.characterImage = Image.FromFile(&quot;object.png&quot;);
+            typename fl1 = new typename();
+            fl1.ShowDialog();
+            this.Close();
+        }
+
+        private void rightplay_Click(object sender, EventArgs e)
+        {
+            variable1 = 3;
+            this.Hide();
+            //character.characterImage = Image.FromFile(&quot;object.png&quot;);
+            typename fl1 = new typename();
+            fl1.ShowDialog();
+            this.Close();
+        }
+
+     
+       
+
+       
+
+        
     }
 }

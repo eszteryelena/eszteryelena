@@ -232,6 +232,8 @@ namespace game
 
         private void fire_Load_1(object sender, EventArgs e)
         {
+            lblName.Text = typename.SetValueForText1;
+
             lives = 5;
             tmrGood.Enabled = true;
             tmrBad.Enabled = true;

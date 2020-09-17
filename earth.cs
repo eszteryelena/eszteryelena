@@ -142,6 +142,8 @@ namespace game
 
         private void earth_Load(object sender, EventArgs e)
         {
+            lblName.Text = typename.SetValueForText1;
+
             score = 0;
             lives = 5;
             tmrGood.Enabled = true;

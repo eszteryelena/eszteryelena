@@ -33,7 +33,7 @@
             this.lblTimer = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -85,17 +85,17 @@
             this.pictureBox5.TabIndex = 12;
             this.pictureBox5.TabStop = false;
             // 
-            // label2
+            // lblName
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Peru;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label2.Location = new System.Drawing.Point(103, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 33);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "eszter ";
+            this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.Color.Peru;
+            this.lblName.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.lblName.Location = new System.Drawing.Point(103, 11);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(98, 33);
+            this.lblName.TabIndex = 11;
+            this.lblName.Text = "eszter ";
             // 
             // label1
             // 
@@ -193,7 +193,7 @@
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox4);
             this.KeyPreview = true;
@@ -218,7 +218,7 @@
         private System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;

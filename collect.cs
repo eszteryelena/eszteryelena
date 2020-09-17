@@ -28,7 +28,7 @@ namespace game
             height = 50;
 
             //planetImage contains the plane1.png image
-            collectImage = Properties.Resources.blue;
+            collectImage = Properties.Resources.rainbow;
             collectRec = new Rectangle(x, y, width, height);
 
         }

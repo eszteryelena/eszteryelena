@@ -141,6 +141,8 @@ namespace game
 
         private void celestial_Load(object sender, EventArgs e)
         {
+            lblName.Text = typename.SetValueForText1;
+
             score = 0;
             lives = 5;
             tmrGood.Enabled = true;
