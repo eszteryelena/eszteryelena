@@ -91,7 +91,21 @@ namespace game
 
         private void tmrGood_Tick_1(object sender, EventArgs e)
         {
-                if (right) // if right arrow key pressed
+            foreach (bad n in bad)
+            {
+                foreach (watershoot m1 in missiles)
+                {
+                    if (n.planetRec.IntersectsWith(m1.missileRec))
+                    {
+                        missiles.Remove(m1);
+                        score += 2;// add 1 to score when planet reaches bottom of panel
+                        n.x = 1495;
+                        break;
+                    }
+                }
+            }
+
+            if (right) // if right arrow key pressed
                 {
                     move = "right";
                     good.MoveSpaceship(move);
