@@ -144,7 +144,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Wheat;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Location = new System.Drawing.Point(12, 57);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(960, 687);
@@ -185,7 +185,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SeaShell;
+            this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = global::game.Properties.Resources.six;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(984, 661);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.pictureBox3);

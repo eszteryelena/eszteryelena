@@ -163,7 +163,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightBlue;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Location = new System.Drawing.Point(12, 50);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(960, 610);
@@ -186,6 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::game.Properties.Resources.wo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(984, 661);
             this.Controls.Add(this.lblTimer);

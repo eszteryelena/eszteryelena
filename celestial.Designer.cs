@@ -31,24 +31,24 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(celestial));
             this.lblTimer = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tmrBad = new System.Windows.Forms.Timer(this.components);
             this.tmrCountdown = new System.Windows.Forms.Timer(this.components);
             this.tmrGood = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTimer
@@ -62,28 +62,6 @@
             this.lblTimer.Size = new System.Drawing.Size(39, 22);
             this.lblTimer.TabIndex = 14;
             this.lblTimer.Text = "330";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Peru;
-            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(645, 3);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(160, 47);
-            this.pictureBox6.TabIndex = 13;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Peru;
-            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(811, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(160, 47);
-            this.pictureBox5.TabIndex = 12;
-            this.pictureBox5.TabStop = false;
             // 
             // lblName
             // 
@@ -109,14 +87,32 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "NAME:";
             // 
-            // pictureBox4
+            // panel1
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Peru;
-            this.pictureBox4.Location = new System.Drawing.Point(12, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(960, 50);
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Location = new System.Drawing.Point(12, 54);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(960, 610);
+            this.panel1.TabIndex = 18;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // tmrBad
+            // 
+            this.tmrBad.Enabled = true;
+            this.tmrBad.Interval = 50;
+            this.tmrBad.Tick += new System.EventHandler(this.tmrBad_Tick);
+            // 
+            // tmrCountdown
+            // 
+            this.tmrCountdown.Enabled = true;
+            this.tmrCountdown.Interval = 1000;
+            this.tmrCountdown.Tick += new System.EventHandler(this.tmrCountdown_Tick);
+            // 
+            // tmrGood
+            // 
+            this.tmrGood.Enabled = true;
+            this.tmrGood.Interval = 40;
+            this.tmrGood.Tick += new System.EventHandler(this.tmrGood_Tick);
             // 
             // pictureBox3
             // 
@@ -154,37 +150,43 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // panel1
+            // pictureBox6
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel1.Location = new System.Drawing.Point(12, 54);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(960, 610);
-            this.panel1.TabIndex = 18;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.pictureBox6.BackColor = System.Drawing.Color.Peru;
+            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Location = new System.Drawing.Point(645, 3);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(160, 47);
+            this.pictureBox6.TabIndex = 13;
+            this.pictureBox6.TabStop = false;
             // 
-            // tmrBad
+            // pictureBox5
             // 
-            this.tmrBad.Enabled = true;
-            this.tmrBad.Interval = 50;
-            this.tmrBad.Tick += new System.EventHandler(this.tmrBad_Tick);
+            this.pictureBox5.BackColor = System.Drawing.Color.Peru;
+            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(811, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(160, 47);
+            this.pictureBox5.TabIndex = 12;
+            this.pictureBox5.TabStop = false;
             // 
-            // tmrCountdown
+            // pictureBox4
             // 
-            this.tmrCountdown.Enabled = true;
-            this.tmrCountdown.Interval = 1000;
-            this.tmrCountdown.Tick += new System.EventHandler(this.tmrCountdown_Tick);
-            // 
-            // tmrGood
-            // 
-            this.tmrGood.Enabled = true;
-            this.tmrGood.Interval = 40;
-            this.tmrGood.Tick += new System.EventHandler(this.tmrGood_Tick);
+            this.pictureBox4.BackColor = System.Drawing.Color.Peru;
+            this.pictureBox4.Location = new System.Drawing.Point(12, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(960, 50);
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
             // 
             // celestial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::game.Properties.Resources.one;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(984, 661);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -202,12 +204,12 @@
             this.Load += new System.EventHandler(this.celestial_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.celestial_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.celestial_KeyUp);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
