@@ -25,7 +25,25 @@ namespace game
             {
                 width = 30;
                 height = 20;
+
+            if (change1.level == 1)
+            {
                 missile = Properties.Resources.water;
+            }
+
+            if (change1.level == 2)
+            {
+                missile = Properties.Resources.bfire;
+            }
+
+            if (change1.level == 3)
+            {
+                missile = Properties.Resources.bflower;
+            }
+            if (change1.level == 4)
+            {
+                missile = Properties.Resources.bstar;
+            }
 
             missileRec = new Rectangle(x, y, width, height);
                 //this code works out the speed of the missile to be used in the moveMissile method
