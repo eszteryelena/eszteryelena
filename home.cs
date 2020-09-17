@@ -38,10 +38,9 @@ namespace game
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Hide(); //the form disappears
-            level = 1;
-            leaderboard l1 = new leaderboard(); //creates a new level form and opens it
-            l1.ShowDialog(); //this shows the form as a modal dialog box. 
-            this.Close(); //this closes the form to complete the form change
+            FrmHighScores FrmHighScore2 = new FrmHighScores();
+            FrmHighScore2.ShowDialog(); //this shows the form as a modal dialog box. 
+            this.Close(); //this closes the form to complete the form change;
         }
     }
 }

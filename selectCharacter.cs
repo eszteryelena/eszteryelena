@@ -25,6 +25,11 @@ namespace game
             pictureBoxLeft.BackgroundImage = Properties.Resources.select1bw;
             pictureBoxMiddle.BackgroundImage = Properties.Resources.select2;
             pictureBoxRight.BackgroundImage = Properties.Resources.select3bw;
+
+
+            leftArrowmiddle.BackgroundImage = Properties.Resources.play3;
+            leftArrowright.BackgroundImage = Properties.Resources.play3;
+            leftArrowleft.BackgroundImage = Properties.Resources.play3;
         }
 
 
@@ -193,11 +198,18 @@ namespace game
             this.Close();
         }
 
-     
-       
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            //character.characterImage = Image.FromFile(&quot;object.png&quot;);
+            home home= new home();
+            home.ShowDialog();
+            this.Close();
+        }
 
-       
-
-        
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

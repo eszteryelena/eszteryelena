@@ -372,5 +372,50 @@
   <ItemGroup>
     <None Include="Resources\wo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homme.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3a604dd3ee78e868b42fbbfcbbfe9c85.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fire1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fire2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fire3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\earth3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\earth1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\earth2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\water3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\water1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\water2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

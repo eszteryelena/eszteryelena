@@ -33,7 +33,7 @@ namespace game
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             //if exit is clicked then the application will close
-            this.Close();
+            Application.Exit();
 
         }
 
@@ -66,6 +66,20 @@ namespace game
             {
                 pictureBoxRight.BackgroundImage = Properties.Resources.select3;
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            //character.characterImage = Image.FromFile(&quot;object.png&quot;);
+            home home = new home();
+            home.ShowDialog();
+            this.Close();
         }
     }
 }

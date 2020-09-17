@@ -25,9 +25,16 @@ namespace game
         private void BtnCheck_Click(object sender, EventArgs e)
         {
             this.Hide(); //the form disappears
-            FrmHighScores FrmHighScore2 = new FrmHighScores(TxtName.Text, TxtScore.Text);
+            FrmHighScores FrmHighScore2 = new FrmHighScores();
             FrmHighScore2.ShowDialog(); //this shows the form as a modal dialog box. 
             this.Close(); //this closes the form to complete the form change
+        }
+
+        private void endscore_Load(object sender, EventArgs e)
+        {
+            string myString = celestial.timeLeft.ToString();
+
+            TxtScore.Text = myString;
         }
     }
 }

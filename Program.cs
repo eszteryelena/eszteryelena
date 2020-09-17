@@ -17,7 +17,7 @@ namespace coven
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new endscore());
+            Application.Run(new home());
         }
     }
 }

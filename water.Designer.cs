@@ -90,9 +90,9 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Peru;
-            this.pictureBox4.Location = new System.Drawing.Point(12, -6);
+            this.pictureBox4.Location = new System.Drawing.Point(-6, -6);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(960, 50);
+            this.pictureBox4.Size = new System.Drawing.Size(994, 50);
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             // 
@@ -186,7 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::game.Properties.Resources.wo;
+            this.BackgroundImage = global::game.Properties.Resources._3a604dd3ee78e868b42fbbfcbbfe9c85;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(984, 661);
             this.Controls.Add(this.lblTimer);

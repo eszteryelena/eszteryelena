@@ -110,6 +110,7 @@ namespace game
                 {
                     if (n.planetRec.IntersectsWith(m1.missileRec))
                     {
+                        CheckScore();
                         missiles.Remove(m1);
                         score += 2;// add 1 to score when planet reaches bottom of panel
                         n.x = 1495;

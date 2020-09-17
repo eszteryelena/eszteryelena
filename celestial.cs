@@ -16,7 +16,7 @@ namespace game
 
         // This integer variable keeps track of the 
         // remaining time.
-        int timeLeft;
+        public static int timeLeft;
         public static int level; //introduces a public integer called level whih can be used on other forms
         Graphics g; //declare a graphics object called g
                     // declare space for an array of 7 objects called planet
@@ -78,6 +78,8 @@ namespace game
             tmrGood.Enabled = true;
             tmrBad.Enabled = true;
             tmrCountdown.Enabled = true;
+
+
         }
 
         private void celestial_KeyDown(object sender, KeyEventArgs e)
@@ -108,7 +110,9 @@ namespace game
                 foreach (watershoot m1 in missiles)
                 {
                     if (n.planetRec.IntersectsWith(m1.missileRec))
+
                     {
+                        CheckScore();
                         missiles.Remove(m1);
                         score += 2;// add 1 to score when planet reaches bottom of panel
                         n.x = 1495;
@@ -159,7 +163,8 @@ namespace game
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+         Application.Exit();
+            
         }
 
         private void CheckLives()
@@ -395,9 +400,9 @@ namespace game
 
 
                 this.Hide(); //the form disappears
-                change1 c1 = new change1(); //creates a new level form and opens it
-                c1.ShowDialog(); //this shows the form as a modal dialog box. 
-                this.Close(); //this closes the form to complete the form change
+                FrmHighScores FrmHighScore2 = new FrmHighScores();
+                FrmHighScore2.ShowDialog(); //this shows the form as a modal dialog box. 
+                this.Close(); //this closes the form to complete the form change;
             }
         }
 

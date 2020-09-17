@@ -15,12 +15,13 @@ namespace game
     {
         string binPath = Application.StartupPath + @"\\highscores.txt";
         List<HighScores> highScores = new List<HighScores>();
-        public FrmHighScores(string playerName, string playerScore)
+        public FrmHighScores()
         {
             InitializeComponent();
             // get name and score from frmGame and show in lblPlayerName and lblPlayerScore
-            lblPlayerName.Text = playerName;
-            lblPlayerScore.Text = playerScore;
+            string myString = celestial.timeLeft.ToString();
+            lblPlayerName.Text = typename.SetValueForText1; ;
+            lblPlayerScore.Text = myString;
 
             var reader = new StreamReader(binPath);
 
@@ -46,11 +47,7 @@ namespace game
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            SaveHighScores();
-            this.Hide(); //the form disappears
-            endscore form = new endscore();
-            form.ShowDialog(); //this shows the form as a modal dialog box. 
-            this.Close(); //this closes the form to complete the form change
+            
         }
 
         public void SortHighScores()
@@ -85,6 +82,20 @@ namespace game
 
             SortHighScores();
             DisplayHighScores();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            SaveHighScores();
+            this.Hide(); //the form disappears
+            home form = new home();
+            form.ShowDialog(); //this shows the form as a modal dialog box. 
+            this.Close(); //this closes the form to complete the form change
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

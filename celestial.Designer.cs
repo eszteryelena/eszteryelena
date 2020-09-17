@@ -175,9 +175,9 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Peru;
-            this.pictureBox4.Location = new System.Drawing.Point(12, 0);
+            this.pictureBox4.Location = new System.Drawing.Point(-14, 0);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(960, 50);
+            this.pictureBox4.Size = new System.Drawing.Size(1005, 50);
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
             // 

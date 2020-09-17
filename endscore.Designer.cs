@@ -101,6 +101,7 @@
             this.Controls.Add(this.label1);
             this.Name = "endscore";
             this.Text = "endscore";
+            this.Load += new System.EventHandler(this.endscore_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
