@@ -67,13 +67,26 @@
     <Compile Include="earth.Designer.cs">
       <DependentUpon>earth.cs</DependentUpon>
     </Compile>
+    <Compile Include="endscore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="endscore.Designer.cs">
+      <DependentUpon>endscore.cs</DependentUpon>
+    </Compile>
     <Compile Include="fire.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fire.Designer.cs">
       <DependentUpon>fire.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmHighScores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHighScores.Designer.cs">
+      <DependentUpon>FrmHighScores.cs</DependentUpon>
+    </Compile>
     <Compile Include="good.cs" />
+    <Compile Include="HighScores.cs" />
     <Compile Include="home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,8 +136,14 @@
     <EmbeddedResource Include="earth.resx">
       <DependentUpon>earth.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="endscore.resx">
+      <DependentUpon>endscore.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fire.resx">
       <DependentUpon>fire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHighScores.resx">
+      <DependentUpon>FrmHighScores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="home.resx">
       <DependentUpon>home.cs</DependentUpon>
