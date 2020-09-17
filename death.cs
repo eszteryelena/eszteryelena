@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace game
 {
-    class potion
+    class death
     {
         public int x, y, width, height;//variables for the rectangle
         public Image potionImage;//variable for the planet&#39;s image
         public Rectangle potionRec;//variable for a rectangle to place our image in
-       
+
 
         Random xstart = new Random();
         Random ystart = new Random();
         //Create a constructor (initialises the values of the fields)
-        public potion(int spacing)
+        public death(int spacing)
         {
 
             int rndmstart = xstart.Next(1250, 7000);
@@ -28,7 +28,7 @@ namespace game
             height = 50;
 
             //planetImage contains the plane1.png image
-            potionImage = Properties.Resources.potion;
+            potionImage = Properties.Resources.death_potion;
             potionRec = new Rectangle(x, y, width, height);
 
         }

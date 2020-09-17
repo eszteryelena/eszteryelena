@@ -1,10 +1,11 @@
-﻿using System;
+﻿using game;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace game
+namespace coven
 {
     static class Program
     {
@@ -16,7 +17,7 @@ namespace game
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new water());
+            Application.Run(new home());
         }
     }
 }

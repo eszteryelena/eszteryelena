@@ -11,22 +11,23 @@ using System.Windows.Forms;
 
 namespace game
 {
-
-    public partial class water : Form
+    public partial class celestial : Form
     {
-        public static int level; //introduces a public integer called level whih can be used on other forms
+
         // This integer variable keeps track of the 
         // remaining time.
         int timeLeft;
-
+        public static int level; //introduces a public integer called level whih can be used on other forms
         Graphics g; //declare a graphics object called g
                     // declare space for an array of 7 objects called planet
         bad[] bad = new bad[7];
-        collect[] collect = new collect[3];
+        collect[] collect = new collect[2];
         potion[] potion = new potion[2];
-        List<watershoot> missiles = new List< watershoot > ();
+        death[] death = new death[3];
+        List<watershoot> missiles = new List<watershoot>();
         Random xspeed = new Random();
         Random ystart = new Random();
+        Random ystart2 = new Random();
 
         good good = new good();
 
@@ -35,11 +36,11 @@ namespace game
         int score, lives;
 
 
-        public water()
+        public celestial()
         {
             InitializeComponent();
 
-            typeof(Panel).InvokeMember("DoubleBuffered",BindingFlags.SetProperty |
+            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty |
    BindingFlags.Instance | BindingFlags.NonPublic, null, panel1, new object[] { true
    });
 
@@ -49,7 +50,7 @@ namespace game
                 bad[i] = new bad(y);
             }
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 2; i++)
             {
                 int y = ystart.Next(100, 600);
                 collect[i] = new collect(y);
@@ -61,6 +62,11 @@ namespace game
                 potion[i] = new potion(y);
             }
 
+            for (int i = 0; i < 3; i++)
+            {
+                int y = ystart2.Next(100, 600);
+                death[i] = new death(y);
+            }
             // Start the timer.
             timeLeft = 330;
             lblTimer.Text = "330";
@@ -74,7 +80,7 @@ namespace game
             tmrCountdown.Enabled = true;
         }
 
-        private void water_KeyDown(object sender, KeyEventArgs e)
+        private void celestial_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Left) { left = true; }
             if (e.KeyData == Keys.Right) { right = true; }
@@ -87,7 +93,7 @@ namespace game
             }
         }
 
-        private void water_KeyUp(object sender, KeyEventArgs e)
+        private void celestial_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Left) { left = false; }
             if (e.KeyData == Keys.Right) { right = false; }
@@ -119,7 +125,7 @@ namespace game
             }
         }
 
-        private void water_Load(object sender, EventArgs e)
+        private void celestial_Load(object sender, EventArgs e)
         {
             score = 0;
             lives = 5;
@@ -194,8 +200,7 @@ namespace game
                 tmrCountdown.Enabled = false;
                 MessageBox.Show("Game Over");
                 pictureBox6.BackgroundImage = Properties.Resources.lives;
-                level = 1;
-
+                level = 4;
 
 
                 this.Hide(); //the form disappears
@@ -220,8 +225,7 @@ namespace game
                 // a MessageBox, and fill in the answers.
                 tmrCountdown.Stop();
                 lblTimer.Text = "Time's up!";
-                level = 2;
-
+                level = 4;
             }
         }
 
@@ -246,12 +250,12 @@ namespace game
 
                 // generate a random number from 5 to 20 and put it in rndmspeed
 
-                int rndmspeed = xspeed.Next(5, 15);
+                int rndmspeed = xspeed.Next(10, 25);
                 bad[i].x -= rndmspeed;
             }
 
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 2; i++)
             {
                 //call the Planet class&#39;s drawPlanet method to draw the images
                 collect[i].DrawPlanet(g);
@@ -272,47 +276,98 @@ namespace game
                 int rndmspeed = xspeed.Next(5, 20);
                 potion[i].x -= rndmspeed;
             }
+
+            for (int i = 0; i < 3; i++)
+            {
+                //call the Planet class&#39;s drawPlanet method to draw the images
+                death[i].DrawPlanet(g);
+
+                // generate a random number from 5 to 20 and put it in rndmspeed
+
+                int rndmspeed = xspeed.Next(5, 20);
+                death[i].x -= rndmspeed;
+            }
         }
         private void CheckScore()
         {
+            if (score == 5)
+            {
+                pictureBox5.BackgroundImage = Properties.Resources.score5;
+            }
+
             if (score == 10)
             {
                 pictureBox5.BackgroundImage = Properties.Resources.score10;
+            }
+            if (score == 15)
+            {
+                pictureBox5.BackgroundImage = Properties.Resources.score15;
             }
             if (score == 20)
             {
                 pictureBox5.BackgroundImage = Properties.Resources.score20;
             }
+            if (score == 25)
+            {
+                pictureBox5.BackgroundImage = Properties.Resources.score25;
+            }
             if (score == 30)
             {
                 pictureBox5.BackgroundImage = Properties.Resources.score30;
+            }
+            if (score == 35)
+            {
+                pictureBox5.BackgroundImage = Properties.Resources.score35;
             }
             if (score == 40)
             {
                 pictureBox5.BackgroundImage = Properties.Resources.score40;
             }
+            if (score == 45)
+            {
+                pictureBox5.BackgroundImage = Properties.Resources.score45;
+            }
             if (score == 50)
             {
                 pictureBox5.BackgroundImage = Properties.Resources.score50;
+            }
+            if (score == 55)
+            {
+                pictureBox5.BackgroundImage = Properties.Resources.score55;
             }
             if (score == 60)
             {
                 pictureBox5.BackgroundImage = Properties.Resources.score60;
             }
+            if (score == 65)
+            {
+                pictureBox5.BackgroundImage = Properties.Resources.score65;
+            }
             if (score == 70)
             {
                 pictureBox5.BackgroundImage = Properties.Resources.score70;
+            }
+            if (score == 75)
+            {
+                pictureBox5.BackgroundImage = Properties.Resources.score75;
             }
             if (score == 80)
             {
                 pictureBox5.BackgroundImage = Properties.Resources.score80;
             }
+            if (score == 85)
+            {
+                pictureBox5.BackgroundImage = Properties.Resources.score85;
+            }
             if (score == 90)
             {
                 pictureBox5.BackgroundImage = Properties.Resources.score90;
             }
-           
 
+            if (score == 95)
+            {
+                pictureBox5.BackgroundImage = Properties.Resources.score95;
+            }
             if (score == 100)
             {
                 tmrGood.Enabled = false;
@@ -320,7 +375,7 @@ namespace game
                 tmrCountdown.Enabled = false;
                 MessageBox.Show("level completed");
                 pictureBox5.BackgroundImage = Properties.Resources.score100;
-                level = 2;
+                level = 5;
 
 
                 this.Hide(); //the form disappears
@@ -330,23 +385,7 @@ namespace game
             }
         }
 
-       /* private void enemyhit()
-        {
-            for (int i = 0; i < 7; i++)
-            ////That's a loop that says, when the enemyhit method is called, for every time that i is smaller than 7, 
-            //I'm going to do whatever is in the code block. Whenever i reaches 7, 
-            //I'll stop. After each iteration of the loop, it increments i by 1 (i++), so that
-            //the loop will eventually stop when it meets the i < 7
-            {
-                bad[i].MovePlanet();//calls the move villn method from the villan class
-                if (missiles.Bounds.IntersectsWith(bad[i].planetRec))//when the blast touches the villan then:
-                {
-                    bad[i].x = 930; // set y value of planetRec
-                }
-            }
-
-
-        } */
+     
 
         private void tmrBad_Tick(object sender, EventArgs e)
         {
@@ -355,7 +394,7 @@ namespace game
             {
                 //call the Planet class&#39;s drawPlanet method to draw the images
                 bad[i].MovePlanet();
-               
+
                 panel1.Invalidate();
 
 
@@ -376,31 +415,63 @@ namespace game
             }
 
 
-           
 
-            for (int i = 0; i < 3; i++)
+
+            for (int i = 0; i < 2; i++)
             {
                 collect[i].MovePlanet();
                 panel1.Invalidate();
 
 
-                 if (good.spaceRec.IntersectsWith(collect[i].collectRec))
+                if (good.spaceRec.IntersectsWith(collect[i].collectRec))
                 {
                     //reset planet[i] back to top of panel
                     int ystart2 = ystart.Next(100, 600);
                     collect[i].y = ystart2;
                     collect[i].x = 930; // set y value of planetRec
-                    score += 10;// lose a life
+                    score += 5;// lose a life
                     CheckScore();
                 }
 
-               
+
 
                 if (collect[i].x <= 0)
                 {
                     int ystart2 = ystart.Next(100, 600);
                     collect[i].y = ystart2;
                     collect[i].x = 1000;
+                }
+            }
+
+
+            for (int i = 0; i < 3; i++)
+            {
+                death[i].MovePlanet();
+                panel1.Invalidate();
+
+
+                if (good.spaceRec.IntersectsWith(death[i].potionRec))
+                {
+                    //reset planet[i] back to top of panel
+                    int ystart2 = ystart.Next(100, 600);
+                    death[i].y = ystart2;
+                    death[i].x = 930; // set y value of planetRec
+
+                    if (score > 0)
+                    {
+                        score -= 5;// lose a life
+                        CheckLives();
+                    }
+                    
+                }
+
+
+
+                if (death[i].x <= 0)
+                {
+                    int ystart2 = ystart.Next(100, 600);
+                    death[i].y = ystart2;
+                    death[i].x = 1000;
                 }
             }
 
@@ -430,6 +501,8 @@ namespace game
                     potion[i].x = 1000;
                 }
             }
+
+
         }
     }
 }
