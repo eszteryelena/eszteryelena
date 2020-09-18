@@ -216,7 +216,10 @@ namespace game
                     int ystart2 = ystart.Next(100, 600);
                     potion[i].y = ystart2;
                     potion[i].x = 930; // set y value of planetRec
-                    lives += 1;// lose a life
+                    if (lives <= 9)
+                    {
+                        lives += 1;// lose a life
+                    }
                     CheckLives2();
                 }
 
