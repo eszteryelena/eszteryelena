@@ -126,7 +126,7 @@
             this.lblMessage.BackColor = System.Drawing.Color.Peru;
             this.lblMessage.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessage.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.lblMessage.Location = new System.Drawing.Point(319, 63);
+            this.lblMessage.Location = new System.Drawing.Point(294, 63);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(168, 22);
             this.lblMessage.TabIndex = 11;
@@ -183,7 +183,7 @@
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Peru;
-            this.pictureBox5.Location = new System.Drawing.Point(-37, 0);
+            this.pictureBox5.Location = new System.Drawing.Point(-38, 0);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(960, 116);
             this.pictureBox5.TabIndex = 24;

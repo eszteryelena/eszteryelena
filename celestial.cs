@@ -163,8 +163,16 @@ namespace game
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-         Application.Exit();
-            
+            tmrGood.Enabled = false;
+            tmrBad.Enabled = false;
+            tmrCountdown.Enabled = false;
+            level = 4;
+
+            this.Hide(); //the form disappears
+            change1 c1 = new change1(); //creates a new level form and opens it
+            c1.ShowDialog(); //this shows the form as a modal dialog box. 
+            this.Close(); //this closes the form to complete the form change
+
         }
 
         private void CheckLives()
